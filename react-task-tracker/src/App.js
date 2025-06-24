@@ -1,6 +1,7 @@
 import AddTask from './components/AddTask';
 import Header from './components/Header';
 import Tasks from "./components/Tasks";
+import Footer from './components/Footer';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
             onDelete={deleteTask}
             onToggle={toggleReminder} /> : 'Nothing here yet...'  // If  no tasks, we get this message.
         }
+        <Footer />
       </div>
     </>
   );

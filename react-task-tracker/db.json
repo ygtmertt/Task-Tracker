@@ -19,12 +19,6 @@
       "reminder": true
     },
     {
-      "id": "5",
-      "text": "Swimming Lesson",
-      "day": "Feb 8th at 3:00pm",
-      "reminder": false
-    },
-    {
       "id": "69a9",
       "text": "Cinema Date",
       "day": "Feb 10th at 8:45pm",
