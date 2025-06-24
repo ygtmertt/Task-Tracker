@@ -2,6 +2,8 @@ import AddTask from './components/AddTask';
 import Header from './components/Header';
 import Tasks from "./components/Tasks";
 import Footer from './components/Footer';
+import About from './components/About';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -80,7 +82,7 @@ function App() {
   }
 
   return (
-    <>
+    <BrowserRouter>
       <div className='container'>
         <Header title={"Task Tracker"} onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
         {showAddTask && <AddTask onAdd={addTask} />}
@@ -90,9 +92,12 @@ function App() {
             onDelete={deleteTask}
             onToggle={toggleReminder} /> : 'Nothing here yet...'  // If  no tasks, we get this message.
         }
+        <Routes>
+          <Route exact path='/about' element={<About />} />
+        </Routes>
         <Footer />
       </div>
-    </>
+    </BrowserRouter>
   );
 
 }
