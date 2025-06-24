@@ -10,12 +10,6 @@
       "id": "2",
       "text": "Dinner Party",
       "day": "Feb 7th at 7:30pm",
-      "reminder": true
-    },
-    {
-      "id": "3",
-      "text": "Groceries",
-      "day": "As soon as possible",
       "reminder": false
     },
     {
