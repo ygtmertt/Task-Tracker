@@ -20,15 +20,25 @@ function App() {
   const fetchTasks = async () => {
     const response = await fetch('http://localhost:5000/tasks')
     const data = await response.json()
-    console.log(data)
+    console.log(data)  // to help see us what data we pulled from db.
     return data;
   }
 
   // Add Task
-  const addTask = (task) => {
-    const id = Math.floor(Math.random() * 10000) + 1;
-    const newTask = { id, ...task };
-    setTasks([...tasks, newTask]);
+  const addTask = async (task) => {  // Ctrl + K + U uncomments, Ctrl + K + C comments the selected lines.
+    const response = await fetch('http://localhost:5000/tasks', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(task)
+    })
+    const data = await response.json() // That's only the new task which is being added.
+    setTasks([...tasks, data]) // We add the new task with the rest.
+
+    // const id = Math.floor(Math.random() * 10000) + 1;
+    // const newTask = { id, ...task };
+    // setTasks([...tasks, newTask]);
   }
 
   // Delete Task
