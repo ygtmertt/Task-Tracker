@@ -7,12 +7,6 @@
       "reminder": true
     },
     {
-      "id": "2",
-      "text": "Dinner Party",
-      "day": "Feb 7th at 7:30pm",
-      "reminder": false
-    },
-    {
       "id": "4",
       "text": "Project Presentation",
       "day": "Feb 10th at 10:30am",
