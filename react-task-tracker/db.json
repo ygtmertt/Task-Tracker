@@ -17,6 +17,12 @@
       "text": "Cinema Date",
       "day": "Feb 10th at 8:45pm",
       "reminder": false
+    },
+    {
+      "id": "64ff",
+      "text": "Basketball Match",
+      "day": "June 28th at 9.00pm",
+      "reminder": false
     }
   ]
 }
